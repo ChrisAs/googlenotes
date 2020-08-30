@@ -18,7 +18,7 @@ export default function Updatemodal(props) {
       </Modal.Header>
       <Modal.Body>
         <input
-          placeholder="Enter text here..."
+          placeholder="Enter note here..."
           value={task}
           onChange={(e) => settask(e.target.value)}
         />

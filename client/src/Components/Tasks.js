@@ -141,7 +141,7 @@ export default class Tasks extends Component {
             <form id="to-do-form" onSubmit={this.addItem}>
               <input
                 type="text"
-                placeholder="Enter task"
+                placeholder="Enter a note"
                 value={this.state.currentItem.text}
                 onChange={this.handleInput}
               ></input>

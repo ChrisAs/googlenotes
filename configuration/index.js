@@ -11,7 +11,7 @@ module.exports = {
     token_uri: "https://oauth2.googleapis.com/token",
     auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
     client_secret: "hlCFQiP2eCwoc3n5LC-wM7on",
-    redirect_uris: "http://localhost:3000/api/google/callback",
-    javascript_origins: ["http://localhost:3000"],
+    redirect_uris: "https://googlenotesapp.herokuapp.com/api/google/callback",
+    javascript_origins: ["https://googlenotesapp.herokuapp.com"],
   },
 };
