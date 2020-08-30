@@ -1,14 +1,14 @@
-const passport = require('passport');
-const GoogleStrategy = require('passport-google-oauth20');
-const JwtStrategy = require('passport-jwt').Strategy;
-const { ExtractJwt } = require('passport-jwt');
-const config = require('./configuration/index');
-const User = require('./models/user');
+const passport = require("passport");
+const GoogleStrategy = require("passport-google-oauth20");
+const JwtStrategy = require("passport-jwt").Strategy;
+const { ExtractJwt } = require("passport-jwt");
+const config = require("./configuration/index");
+const User = require("./models/user");
 
 const cookieExtractor = (req) => {
   let token = null;
   if (req && req.cookies) {
-    token = req.cookies['access_token'];
+    token = req.cookies["access_token"];
   }
   return token;
 };
@@ -35,12 +35,12 @@ passport.use(
 );
 
 passport.use(
-  'google',
+  "google",
   new GoogleStrategy(
     {
       clientID: config.web.client_id,
       clientSecret: config.web.client_secret,
-      callbackURL: config.web.redirect_uris,
+      callbackURL: "/api/google/callback",
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
