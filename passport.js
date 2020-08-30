@@ -40,7 +40,7 @@ passport.use(
     {
       clientID: config.web.client_id,
       clientSecret: config.web.client_secret,
-      callbackURL: "/api/google/callback",
+      callbackURL: config.web.redirect_uris,
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
