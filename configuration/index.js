@@ -1,6 +1,6 @@
 module.exports = {
-  jwtSecret: "fiverrsecret",
-  // db: 'mongodb://localhost:27017/test',
+  jwtSecret: "pinecone",
+
   db:
     "mongodb+srv://dbAdmin:redapple@cluster0.ilkzw.mongodb.net/<dbname>?retryWrites=true&w=majority",
   web: {
