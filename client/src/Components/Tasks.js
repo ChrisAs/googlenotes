@@ -160,7 +160,6 @@ export default class Tasks extends Component {
                     },
                   },
                   () => {
-                    console.log("con ==", this.state.selecteditem);
                     this.setState({ showUpdate: true });
                   }
                 );
